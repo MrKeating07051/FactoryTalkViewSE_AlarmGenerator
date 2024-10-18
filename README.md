@@ -102,24 +102,24 @@ Generated on 2024-10-18 12:30:45
 ======= Alarm 'FullStall' for device 'DCV901212' ============================
 
 Polling interval tags:
-<Tag>/Area::[CLX]DCV901212Alm_FullStall</Tag>
-<Tag>/Area::[CLX]DCV901212Cfg_Tag</Tag>
-<Tag>/Area::[CLX]DCV901212Cfg_FullStallSeverity</Tag>
+<Tag>/Area::[CLX]DCV901212.Alm_FullStall</Tag>
+<Tag>/Area::[CLX]DCV901212.Cfg_Tag</Tag>
+<Tag>/Area::[CLX]DCV901212.Cfg_FullStallSeverity</Tag>
 
 Generated Message:
 <Message id="0">
     <Msgs>
-        <Msg xml:lang="en-US">/*S:0 %Tag1*/ FullStall - Equipment is in a full stall state</Msg>
+        <Msg xml:lang="en-US">/*S:0 %Tag1*/ Full Stall - Equipment is in a full stall state</Msg>
     </Msgs>
 </Message>
 
 Generated Alarm Data:
 
-<FTAlarmElement name="DCV901212 FullStall" inuse="Yes" latched="false" ackRequired="true" style="Discrete">
+<FTAlarmElement name="DCV901212 Full Stall" inuse="Yes" latched="false" ackRequired="true" style="Discrete">
   <DiscreteElement>
-    <DataItem>/Area::[CLX]DCV901212Alm_FullStall</DataItem>
+    <DataItem>/Area::[CLX]DCV901212.Alm_FullStall</DataItem>
     <Style>DiscreteTrue</Style>
-    <Severity>/Area::[CLX]DCV901212Cfg_FullStallSeverity</Severity>
+    <Severity>/Area::[CLX]DCV901212.Cfg_FullStallSeverity</Severity>
     <DelayInterval>0</DelayInterval>
     <EnableTag>false</EnableTag>
     <UserData></UserData>
@@ -131,5 +131,10 @@ Generated Alarm Data:
 
 ======= End of Alarm 'FullStall' ============================
 ```
+
+## To-do
+
+- Create ability to write directly to FT View SE alarm export data and automatically detect existing alarm areas instead of manual copy/paste
+- Create analog alarms (maybe)
 
 ---
