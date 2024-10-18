@@ -94,7 +94,7 @@ Create a `config.json` file in the same directory as the script with the followi
 
 ## Example Output
 
-A generated might look like this:
+A generated alarm might look like this:
 
 ```
 Generated on 2024-10-18 12:30:45
