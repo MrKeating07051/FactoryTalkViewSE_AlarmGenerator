@@ -1,7 +1,7 @@
 # FactoryTalk View Site Edition XML Alarm Generator
 
 ## Overview
-This Python script generates FactoryTalk View Site Edition (SE) XML alarm data based on input for devices and alarms. It creates XML alarms for devices connected to a PLC and generates a corresponding polling line and alarm messages. The output is saved in a text file that includes both human-readable alarm descriptions and well-structured XML data.
+This Python script generates FactoryTalk View Site Edition (SE) XML alarm data based on input for devices and alarms. It creates XML alarms for devices connected to a PLC and generates polling tags, messages, and alarm data. The output is saved in a text file that includes both human-readable alarm descriptions and well-structured XML data.
 
 ### Key Features:
 - **Load Configuration**: Loads configuration settings from `config.json`.
