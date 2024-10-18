@@ -97,39 +97,162 @@ Create a `config.json` file in the same directory as the script with the followi
 A generated alarm might look like this:
 
 ```
-Generated on 2024-10-18 12:30:45
 
-======= Alarm 'FullStall' for device 'DCV901212' ============================
+Generated on 2024-10-18 13:20:22
+
+======= Alarm 'Full Stall' for device 'DCV901212' ============================
 
 Polling interval tags:
-<Tag>/Area::[CLX]DCV901212.Alm_FullStall</Tag>
-<Tag>/Area::[CLX]DCV901212.Cfg_Tag</Tag>
-<Tag>/Area::[CLX]DCV901212.Cfg_FullStallSeverity</Tag>
+
+<Tag>/Data::[CLX]DCV901212.Alm_FullStall</Tag>
+<Tag>/Data::[CLX]DCV901212.Cfg_Tag</Tag>
+<Tag>/Data::[CLX]DCV901212.Cfg_FullStallSeverity</Tag>
+
+Generated Alarm Data:
+
+<?xml version="1.0" ?>
+<FTAlarmElement name="DCV901212 Full Stall" inuse="Yes" latched="false" ackRequired="true" style="Discrete">
+  <DiscreteElement>
+    <DataItem>/Data::[CLX]DCV901212.Alm_FullStall</DataItem>
+    <Style>DiscreteTrue</Style>
+    <Severity>/Data::[CLX]DCV901212.Cfg_FullStallSeverity</Severity>
+    <DelayInterval>0</DelayInterval>
+    <EnableTag>false</EnableTag>
+    <UserData/>
+    <RSVCmd/>
+    <AlarmClass/>
+    <GroupID>0</GroupID>
+    <HandshakeTags>
+      <InAlarmDataItem>/Data::[CLX]DCV901212.Sts_FullStall</InAlarmDataItem>
+      <DisabledDataItem>/Data::[CLX]DCV901212.Sts_FullStallDisabled</DisabledDataItem>
+      <AckedDataItem/>
+      <SuppressedDataItem>/Data::[CLX]DCV901212.Sts_FullStallSuppressed</SuppressedDataItem>
+      <ShelvedDataItem>/Data::[CLX]DCV901212.Sts_FullStallShelved</ShelvedDataItem>
+    </HandshakeTags>
+    <RemoteAckAllDataItem AutoReset="false"/>
+    <RemoteDisableDataItem AutoReset="false"/>
+    <RemoteEnableDataItem AutoReset="false"/>
+    <RemoteSuppressDataItem AutoReset="false"/>
+    <RemoteUnSuppressDataItem AutoReset="false"/>
+    <RemoteShelveAllDataItem AutoReset="false"/>
+    <RemoteUnShelveDataItem AutoReset="false"/>
+    <RemoteShelveDuration/>
+    <MessageID>0</MessageID>
+    <Params>
+      <Param key="Tag1">/Data::[CLX]DCV901212.Cfg_Tag</Param>
+    </Params>
+  </DiscreteElement>
+</FTAlarmElement>
+
+======= End of Alarm 'Full Stall' ============================
+
+
+Generated on 2024-10-18 13:20:22
+
+======= Alarm 'IO Fault' for device 'DCV901212' ============================
+
+Polling interval tags:
+
+<Tag>/Data::[CLX]DCV901212.Alm_IOFault</Tag>
+<Tag>/Data::[CLX]DCV901212.Cfg_Tag</Tag>
+<Tag>/Data::[CLX]DCV901212.Cfg_IOFaultSeverity</Tag>
+
+Generated Alarm Data:
+
+<?xml version="1.0" ?>
+<FTAlarmElement name="DCV901212 IO Fault" inuse="Yes" latched="false" ackRequired="true" style="Discrete">
+  <DiscreteElement>
+    <DataItem>/Data::[CLX]DCV901212.Alm_IOFault</DataItem>
+    <Style>DiscreteTrue</Style>
+    <Severity>/Data::[CLX]DCV901212.Cfg_IOFaultSeverity</Severity>
+    <DelayInterval>0</DelayInterval>
+    <EnableTag>false</EnableTag>
+    <UserData/>
+    <RSVCmd/>
+    <AlarmClass/>
+    <GroupID>0</GroupID>
+    <HandshakeTags>
+      <InAlarmDataItem>/Data::[CLX]DCV901212.Sts_IOFault</InAlarmDataItem>
+      <DisabledDataItem>/Data::[CLX]DCV901212.Sts_IOFaultDisabled</DisabledDataItem>
+      <AckedDataItem/>
+      <SuppressedDataItem>/Data::[CLX]DCV901212.Sts_IOFaultSuppressed</SuppressedDataItem>
+      <ShelvedDataItem>/Data::[CLX]DCV901212.Sts_IOFaultShelved</ShelvedDataItem>
+    </HandshakeTags>
+    <RemoteAckAllDataItem AutoReset="false"/>
+    <RemoteDisableDataItem AutoReset="false"/>
+    <RemoteEnableDataItem AutoReset="false"/>
+    <RemoteSuppressDataItem AutoReset="false"/>
+    <RemoteUnSuppressDataItem AutoReset="false"/>
+    <RemoteShelveAllDataItem AutoReset="false"/>
+    <RemoteUnShelveDataItem AutoReset="false"/>
+    <RemoteShelveDuration/>
+    <MessageID>0</MessageID>
+    <Params>
+      <Param key="Tag1">/Data::[CLX]DCV901212.Cfg_Tag</Param>
+    </Params>
+  </DiscreteElement>
+</FTAlarmElement>
+
+======= End of Alarm 'IO Fault' ============================
+
+
+Generated on 2024-10-18 13:20:22
+
+======= Alarm 'Transit Stall' for device 'DCV901212' ============================
+
+Polling interval tags:
+
+<Tag>/Data::[CLX]DCV901212.Alm_TransitStall</Tag>
+<Tag>/Data::[CLX]DCV901212.Cfg_Tag</Tag>
+<Tag>/Data::[CLX]DCV901212.Cfg_TransitStallSeverity</Tag>
 
 Generated Message:
+
 <Message id="0">
     <Msgs>
-        <Msg xml:lang="en-US">/*S:0 %Tag1*/ Full Stall - Equipment is in a full stall state</Msg>
+        <Msg xml:lang="en-US">/*S:0 %Tag1*/ Transit Stall - Valve failed to move to target position</Msg>
     </Msgs>
 </Message>
 
 Generated Alarm Data:
 
-<FTAlarmElement name="DCV901212 Full Stall" inuse="Yes" latched="false" ackRequired="true" style="Discrete">
+<?xml version="1.0" ?>
+<FTAlarmElement name="DCV901212 Transit Stall" inuse="Yes" latched="false" ackRequired="true" style="Discrete">
   <DiscreteElement>
-    <DataItem>/Area::[CLX]DCV901212.Alm_FullStall</DataItem>
+    <DataItem>/Data::[CLX]DCV901212.Alm_TransitStall</DataItem>
     <Style>DiscreteTrue</Style>
-    <Severity>/Area::[CLX]DCV901212.Cfg_FullStallSeverity</Severity>
+    <Severity>/Data::[CLX]DCV901212.Cfg_TransitStallSeverity</Severity>
     <DelayInterval>0</DelayInterval>
     <EnableTag>false</EnableTag>
-    <UserData></UserData>
-    <RSVCmd></RSVCmd>
-    <AlarmClass></AlarmClass>
-    <GroupID>1</GroupID>
+    <UserData/>
+    <RSVCmd/>
+    <AlarmClass/>
+    <GroupID>0</GroupID>
+    <HandshakeTags>
+      <InAlarmDataItem>/Data::[CLX]DCV901212.Sts_TransitStall</InAlarmDataItem>
+      <DisabledDataItem>/Data::[CLX]DCV901212.Sts_TransitStallDisabled</DisabledDataItem>
+      <AckedDataItem/>
+      <SuppressedDataItem>/Data::[CLX]DCV901212.Sts_TransitStallSuppressed</SuppressedDataItem>
+      <ShelvedDataItem>/Data::[CLX]DCV901212.Sts_TransitStallShelved</ShelvedDataItem>
+    </HandshakeTags>
+    <RemoteAckAllDataItem AutoReset="false"/>
+    <RemoteDisableDataItem AutoReset="false"/>
+    <RemoteEnableDataItem AutoReset="false"/>
+    <RemoteSuppressDataItem AutoReset="false"/>
+    <RemoteUnSuppressDataItem AutoReset="false"/>
+    <RemoteShelveAllDataItem AutoReset="false"/>
+    <RemoteUnShelveDataItem AutoReset="false"/>
+    <RemoteShelveDuration/>
+    <MessageID>0</MessageID>
+    <Params>
+      <Param key="Tag1">/Data::[CLX]DCV901212.Cfg_Tag</Param>
+    </Params>
   </DiscreteElement>
 </FTAlarmElement>
 
-======= End of Alarm 'FullStall' ============================
+======= End of Alarm 'Transit Stall' ============================
+
+
 ```
 
 ## To-do
