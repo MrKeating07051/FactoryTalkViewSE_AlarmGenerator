@@ -1,0 +1,16 @@
+{
+  "default_data_area": "/Data::",
+  "default_plc_path": "[CLX]",
+  "tag_alm_prefix": ".Alm_",
+  "tag_cfg_prefix": ".Cfg_",
+  "tag_sts_prefix": ".Sts_",
+  "use_tag_severity": true,
+  "use_handshake_tags": true,
+  "handshake_inalarm": true,
+  "handshake_disabled": true,
+  "handshake_acked": false,
+  "handshake_suppressed": true,
+  "handshake_shelved": true,
+  "default_group_id": "0",
+  "include_polling": true
+}
