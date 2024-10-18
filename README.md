@@ -34,7 +34,9 @@ pip install python
 
 ## Configuration
 
-Create a `config.json` file in the same directory as the script with the following structure:
+Depending on the needs of your PLC/HMI system, you may need to change how alarms are generated.
+This specific config is made to work with Rockwell Automation PlantPAx Process Library 4.10.06. If you're using that, you're in luck!
+Modify `config.json` file, which is stored in the same directory as the script with the following structure:
 
 ```json
 {
@@ -43,7 +45,7 @@ Create a `config.json` file in the same directory as the script with the followi
     "tag_alm_prefix": "Alm_",
     "tag_cfg_prefix": "Cfg_",
     "tag_sts_prefix": "Sts_",
-    "default_group_id": "1",
+    "default_group_id": "0",
     "use_tag_severity": true,
     "use_handshake_tags": true,
     "handshake_inalarm": true,
@@ -55,8 +57,8 @@ Create a `config.json` file in the same directory as the script with the followi
 ```
 
 ### Configuration Options:
-- **default_data_area**: Default area in which alarms are defined.
-- **default_plc_path**: Path to the PLC system.
+- **default_data_area**: Default area in which PLC data is defined.
+- **default_plc_path**: Shortcut name on data server.
 - **tag_alm_prefix**: Prefix used for alarm tags.
 - **tag_cfg_prefix**: Prefix used for configuration tags.
 - **tag_sts_prefix**: Prefix used for status tags.
@@ -69,22 +71,19 @@ Create a `config.json` file in the same directory as the script with the followi
 
 ## Usage
 
-1. Run the script:
-   ```bash
-   python alarm_generator.py
-   ```
+1. Run the script.
 
 2. The program will load the configuration file (if present) and ask you to input:
    - Device name
    - Alarm name(s) as defined in the PLC
-   - Custom human-readable alarm name(s) (optional)
-   - Severity level for each alarm (if not using tag-based severity)
+   - Human-readable alarm name(s) (original alarm name by default)
+   - Severity level for each alarm (if not using tag-based severity as defined in json config)
    - Messages for alarms (optional)
 
 3. After inputting the alarms, the program will save the generated alarm data into a `.txt` file in the same directory as the script.
 
 4. The output will include:
-   - Polling information for each alarm
+   - Polling tag data for each alarm
    - Generated XML for each alarm
    - Any generated messages
 
@@ -94,7 +93,8 @@ Create a `config.json` file in the same directory as the script with the followi
 
 ## Example Output
 
-A generated alarm might look like this:
+To demonstrate the output of thes script, this is a dataset generated for a discrete solenoid valve with limit switch feedback based on RA Process Library 4.10.06.
+An alarm dataset might look like this:
 
 ```
 
